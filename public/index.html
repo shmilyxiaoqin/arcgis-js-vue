@@ -24,99 +24,103 @@
     function arcgis(func) {
         require(['esri/Map', 'esri/Basemap', 'esri/Viewpoint', 'esri/Color',
 
-            'esri/views/MapView', 'esri/views/ui/DefaultUI', 'esri/views/draw/Draw',
+                'esri/views/MapView', 'esri/views/ui/DefaultUI', 'esri/views/draw/Draw',
 
-            'esri/widgets/Legend', 'esri/widgets/Home', 'esri/widgets/Search', 'esri/widgets/BasemapToggle',
-            'esri/widgets/ScaleBar', 'esri/widgets/Locate', 'esri/widgets/LayerList', 'esri/widgets/Expand',
+                'esri/widgets/Legend', 'esri/widgets/Home', 'esri/widgets/Search', 'esri/widgets/BasemapToggle',
+                'esri/widgets/ScaleBar', 'esri/widgets/Locate', 'esri/widgets/LayerList', 'esri/widgets/Expand',
 
-            'esri/layers/TileLayer', 'esri/layers/MapImageLayer', 'esri/layers/GraphicsLayer', 'esri/layers/FeatureLayer', "esri/layers/WebTileLayer",
-            "esri/layers/CSVLayer", "esri/layers/KMLLayer", "esri/layers/StreamLayer", "esri/layers/ImageryLayer", "esri/layers/GeoJSONLayer", "esri/layers/VectorTileLayer",
+                'esri/layers/TileLayer', 'esri/layers/MapImageLayer', 'esri/layers/GraphicsLayer', 'esri/layers/FeatureLayer', "esri/layers/WebTileLayer",
+                "esri/layers/CSVLayer", "esri/layers/KMLLayer", "esri/layers/StreamLayer", "esri/layers/ImageryLayer", "esri/layers/GeoJSONLayer", "esri/layers/VectorTileLayer",
 
-            'esri/tasks/IdentifyTask', 'esri/tasks/FindTask', 'esri/tasks/QueryTask', 'esri/tasks/GeometryService',
+                'esri/tasks/IdentifyTask', 'esri/tasks/FindTask', 'esri/tasks/QueryTask', 'esri/tasks/GeometryService',
 
-            'esri/tasks/support/IdentifyParameters', 'esri/tasks/support/FindParameters', 'esri/tasks/support/Query', 'esri/tasks/support/ProjectParameters',
+                'esri/tasks/support/IdentifyParameters', 'esri/tasks/support/FindParameters', 'esri/tasks/support/Query', 'esri/tasks/support/ProjectParameters',
 
-            'esri/geometry/Point', 'esri/geometry/Circle', 'esri/Graphic', 'esri/geometry/Polygon', 'esri/geometry/SpatialReference',
+                'esri/geometry/Point', 'esri/geometry/Circle', 'esri/Graphic', 'esri/geometry/Polygon', 'esri/geometry/SpatialReference',
 
-            'esri/symbols/CIMSymbol', 'esri/symbols/WebStyleSymbol', 'esri/symbols/SimpleFillSymbol', 'esri/symbols/SimpleLineSymbol',
-            "esri/renderers/SimpleRenderer","esri/renderers/UniqueValueRenderer","esri/renderers/ClassBreaksRenderer","esri/renderers/HeatmapRenderer",
+                'esri/symbols/CIMSymbol', 'esri/symbols/WebStyleSymbol', 'esri/symbols/SimpleFillSymbol', 'esri/symbols/SimpleLineSymbol', "esri/symbols/PictureMarkerSymbol",
+                "esri/symbols/SimpleMarkerSymbol","esri/symbols/TextSymbol",
+
+                "esri/renderers/SimpleRenderer", "esri/renderers/UniqueValueRenderer", "esri/renderers/ClassBreaksRenderer", "esri/renderers/HeatmapRenderer",
 
                 'esri/core/urlUtils',
 
-                    'dojo/domReady!'
-    ],
+                'dojo/domReady!'
+            ],
 
-        function(Map, Basemap, Viewpoint, Color,
-                  MapView, DefaultUI, Draw,
-                  Legend, Home, Search, BasemapToggle, ScaleBar, Locate, LayerList, Expand,
-                  TileLayer, MapImageLayer, GraphicsLayer, FeatureLayer, WebTileLayer, CSVLayer, KMLLayer, StreamLayer, ImageryLayer,
-                  GeoJSONLayer, VectorTileLayer,
-                  IdentifyTask, FindTask, QueryTask, GeometryService,
-                  IdentifyParameters, FindParameters, Query, ProjectParameters,
-                  Point, Circle, Graphic, Polygon,
-                  SpatialReference,
-                  CIMSymbol, WebStyleSymbol, SimpleFillSymbol, SimpleLineSymbol,
-                  SimpleRenderer,UniqueValueRenderer,ClassBreaksRenderer,HeatmapRenderer,
+            function (Map, Basemap, Viewpoint, Color,
+                      MapView, DefaultUI, Draw,
+                      Legend, Home, Search, BasemapToggle, ScaleBar, Locate, LayerList, Expand,
+                      TileLayer, MapImageLayer, GraphicsLayer, FeatureLayer, WebTileLayer, CSVLayer, KMLLayer, StreamLayer, ImageryLayer,
+                      GeoJSONLayer, VectorTileLayer,
+                      IdentifyTask, FindTask, QueryTask, GeometryService,
+                      IdentifyParameters, FindParameters, Query, ProjectParameters,
+                      Point, Circle, Graphic, Polygon,
+                      SpatialReference,
+                      CIMSymbol, WebStyleSymbol, SimpleFillSymbol, SimpleLineSymbol, PictureMarkerSymbol, SimpleMarkerSymbol,TextSymbol,
+                      SimpleRenderer, UniqueValueRenderer, ClassBreaksRenderer, HeatmapRenderer,
                       urlUtils,
-    )
-        {
-            if (!esri) {
-                esri = {
-                    Map,
-                    Basemap,
-                    Viewpoint,
-                    Draw,
-                    Color,
-                    MapView,
-                    DefaultUI,
-                    Legend,
-                    Home,
-                    Search,
-                    BasemapToggle,
-                    ScaleBar,
-                    Locate,
-                    LayerList,
-                    Expand,
-                    TileLayer,
-                    MapImageLayer,
-                    GraphicsLayer,
-                    FeatureLayer,
-                    WebTileLayer,
-                    CSVLayer,
-                    KMLLayer,
-                    StreamLayer,
-                    ImageryLayer,
-                    GeoJSONLayer,
-                    VectorTileLayer,
-                    IdentifyTask,
-                    FindTask,
-                    QueryTask,
-                    GeometryService,
-                    IdentifyParameters,
-                    FindParameters,
-                    Query,
-                    ProjectParameters,
+            ) {
+                if (!esri) {
+                    esri = {
+                        Map,
+                        Basemap,
+                        Viewpoint,
+                        Draw,
+                        Color,
+                        MapView,
+                        DefaultUI,
+                        Legend,
+                        Home,
+                        Search,
+                        BasemapToggle,
+                        ScaleBar,
+                        Locate,
+                        LayerList,
+                        Expand,
+                        TileLayer,
+                        MapImageLayer,
+                        GraphicsLayer,
+                        FeatureLayer,
+                        WebTileLayer,
+                        CSVLayer,
+                        KMLLayer,
+                        StreamLayer,
+                        ImageryLayer,
+                        GeoJSONLayer,
+                        VectorTileLayer,
+                        IdentifyTask,
+                        FindTask,
+                        QueryTask,
+                        GeometryService,
+                        IdentifyParameters,
+                        FindParameters,
+                        Query,
+                        ProjectParameters,
 
-                    Point,
-                    Circle,
-                    Graphic,
-                    Polygon,
-                    SpatialReference,
-                    CIMSymbol,
-                    WebStyleSymbol,
-                    SimpleFillSymbol,
-                    SimpleLineSymbol,
-                    SimpleRenderer,
-                    UniqueValueRenderer,
-                    ClassBreaksRenderer,
-                    HeatmapRenderer,
+                        Point,
+                        Circle,
+                        Graphic,
+                        Polygon,
+                        SpatialReference,
+                        CIMSymbol,
+                        WebStyleSymbol,
+                        SimpleFillSymbol,
+                        SimpleLineSymbol,
+                        PictureMarkerSymbol,
+                        SimpleMarkerSymbol,
+                        TextSymbol,
+                        SimpleRenderer,
+                        UniqueValueRenderer,
+                        ClassBreaksRenderer,
+                        HeatmapRenderer,
                         urlUtils,
+                    }
+                    window.esri = esri
+                }
+                func(esri)
             }
-                window.esri = esri
-            }
-            func(esri)
-        }
-    )
+        )
     }
 
     window.arcgis = arcgis
