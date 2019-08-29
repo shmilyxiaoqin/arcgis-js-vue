@@ -32,14 +32,16 @@
                 'esri/layers/TileLayer', 'esri/layers/MapImageLayer', 'esri/layers/GraphicsLayer', 'esri/layers/FeatureLayer', "esri/layers/WebTileLayer",
                 "esri/layers/CSVLayer", "esri/layers/KMLLayer", "esri/layers/StreamLayer", "esri/layers/ImageryLayer", "esri/layers/GeoJSONLayer", "esri/layers/VectorTileLayer",
 
-                'esri/tasks/IdentifyTask', 'esri/tasks/FindTask', 'esri/tasks/QueryTask', 'esri/tasks/GeometryService',
+                'esri/tasks/IdentifyTask', 'esri/tasks/FindTask', 'esri/tasks/QueryTask', 'esri/tasks/GeometryService', "esri/tasks/ClosestFacilityTask",
+                "esri/tasks/ServiceAreaTask","esri/tasks/RouteTask",
 
                 'esri/tasks/support/IdentifyParameters', 'esri/tasks/support/FindParameters', 'esri/tasks/support/Query', 'esri/tasks/support/ProjectParameters',
+                "esri/tasks/support/ClosestFacilityParameters","esri/tasks/support/ServiceAreaParameters","esri/tasks/support/RouteParameters",
 
                 'esri/geometry/Point', 'esri/geometry/Circle', 'esri/Graphic', 'esri/geometry/Polygon', 'esri/geometry/SpatialReference',
 
                 'esri/symbols/CIMSymbol', 'esri/symbols/WebStyleSymbol', 'esri/symbols/SimpleFillSymbol', 'esri/symbols/SimpleLineSymbol', "esri/symbols/PictureMarkerSymbol",
-                "esri/symbols/SimpleMarkerSymbol","esri/symbols/TextSymbol",
+                "esri/symbols/SimpleMarkerSymbol", "esri/symbols/TextSymbol",
 
                 "esri/renderers/SimpleRenderer", "esri/renderers/UniqueValueRenderer", "esri/renderers/ClassBreaksRenderer", "esri/renderers/HeatmapRenderer",
 
@@ -53,11 +55,12 @@
                       Legend, Home, Search, BasemapToggle, ScaleBar, Locate, LayerList, Expand,
                       TileLayer, MapImageLayer, GraphicsLayer, FeatureLayer, WebTileLayer, CSVLayer, KMLLayer, StreamLayer, ImageryLayer,
                       GeoJSONLayer, VectorTileLayer,
-                      IdentifyTask, FindTask, QueryTask, GeometryService,
-                      IdentifyParameters, FindParameters, Query, ProjectParameters,
+                      IdentifyTask, FindTask, QueryTask, GeometryService,ClosestFacilityTask,ServiceAreaTask,RouteTask,
+                      IdentifyParameters, FindParameters, Query, ProjectParameters,ClosestFacilityParameters,RouteParameters,
+                      ServiceAreaParameters,
                       Point, Circle, Graphic, Polygon,
                       SpatialReference,
-                      CIMSymbol, WebStyleSymbol, SimpleFillSymbol, SimpleLineSymbol, PictureMarkerSymbol, SimpleMarkerSymbol,TextSymbol,
+                      CIMSymbol, WebStyleSymbol, SimpleFillSymbol, SimpleLineSymbol, PictureMarkerSymbol, SimpleMarkerSymbol, TextSymbol,
                       SimpleRenderer, UniqueValueRenderer, ClassBreaksRenderer, HeatmapRenderer,
                       urlUtils,
             ) {
@@ -93,11 +96,16 @@
                         FindTask,
                         QueryTask,
                         GeometryService,
+                        ClosestFacilityTask,
+                        ServiceAreaTask,
+                        RouteTask,
                         IdentifyParameters,
                         FindParameters,
                         Query,
                         ProjectParameters,
-
+                        ClosestFacilityParameters,
+                        ServiceAreaParameters,
+                        RouteParameters,
                         Point,
                         Circle,
                         Graphic,
