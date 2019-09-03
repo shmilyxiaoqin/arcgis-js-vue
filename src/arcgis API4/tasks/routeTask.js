@@ -19,7 +19,6 @@ function routeTask(param, url) {
             outSpatialReference:'',//输出空间参考
             returnRoutes: true,// 将在每个RouteResult的route属性中生成并返回最近的设施路由
             returnDirections: true,//应为每条路线生成行车路线
-
         })
         rt.solve(rp).then(data => resolve(data))
     })

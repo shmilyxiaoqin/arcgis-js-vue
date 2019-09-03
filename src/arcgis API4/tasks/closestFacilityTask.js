@@ -5,6 +5,7 @@
  * @param param 参数配置对象
  * @returns {Promise<unknown>} 异步
  */
+// eslint-disable-next-line no-unused-vars
 function closestFacilityTask(url, param) {
     return new Promise(resolve => {
         const {ClosestFacilityTask, ClosestFacilityParameters} = window.esri

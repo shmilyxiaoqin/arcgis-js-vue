@@ -4,8 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>logo.png">
-    <title>arcgis api 功能合集</title>
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>vue项目测试</title>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.12/esri/themes/light/main.css">
+    <script src="https://js.arcgis.com/4.12/"></script>
 </head>
 <style>
     html, body {
@@ -33,10 +35,10 @@
                 "esri/layers/CSVLayer", "esri/layers/KMLLayer", "esri/layers/StreamLayer", "esri/layers/ImageryLayer", "esri/layers/GeoJSONLayer", "esri/layers/VectorTileLayer",
 
                 'esri/tasks/IdentifyTask', 'esri/tasks/FindTask', 'esri/tasks/QueryTask', 'esri/tasks/GeometryService', "esri/tasks/ClosestFacilityTask",
-                "esri/tasks/ServiceAreaTask","esri/tasks/RouteTask",
+                "esri/tasks/ServiceAreaTask","esri/tasks/RouteTask","esri/tasks/Locator",
 
                 'esri/tasks/support/IdentifyParameters', 'esri/tasks/support/FindParameters', 'esri/tasks/support/Query', 'esri/tasks/support/ProjectParameters',
-                "esri/tasks/support/ClosestFacilityParameters","esri/tasks/support/ServiceAreaParameters","esri/tasks/support/RouteParameters",
+                "esri/tasks/support/ClosestFacilityParameters","esri/tasks/support/ServiceAreaParameters","esri/tasks/support/RouteParameters","esri/tasks/support/BufferParameters",
 
                 'esri/geometry/Point', 'esri/geometry/Circle', 'esri/Graphic', 'esri/geometry/Polygon', 'esri/geometry/SpatialReference',
 
@@ -55,8 +57,8 @@
                       Legend, Home, Search, BasemapToggle, ScaleBar, Locate, LayerList, Expand,
                       TileLayer, MapImageLayer, GraphicsLayer, FeatureLayer, WebTileLayer, CSVLayer, KMLLayer, StreamLayer, ImageryLayer,
                       GeoJSONLayer, VectorTileLayer,
-                      IdentifyTask, FindTask, QueryTask, GeometryService,ClosestFacilityTask,ServiceAreaTask,RouteTask,
-                      IdentifyParameters, FindParameters, Query, ProjectParameters,ClosestFacilityParameters,RouteParameters,
+                      IdentifyTask, FindTask, QueryTask, GeometryService,ClosestFacilityTask,ServiceAreaTask,RouteTask,Locator,
+                      IdentifyParameters, FindParameters, Query, ProjectParameters,ClosestFacilityParameters,RouteParameters,BufferParameters,
                       ServiceAreaParameters,
                       Point, Circle, Graphic, Polygon,
                       SpatialReference,
@@ -99,6 +101,7 @@
                         ClosestFacilityTask,
                         ServiceAreaTask,
                         RouteTask,
+                        Locator,
                         IdentifyParameters,
                         FindParameters,
                         Query,
@@ -106,6 +109,7 @@
                         ClosestFacilityParameters,
                         ServiceAreaParameters,
                         RouteParameters,
+                        BufferParameters,
                         Point,
                         Circle,
                         Graphic,

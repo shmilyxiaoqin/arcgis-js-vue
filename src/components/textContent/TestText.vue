@@ -1,0 +1,17 @@
+<template>
+<div>
+    <h1>This is a heading</h1>
+    <p>This is a paragraph</p>
+    <p>This is another paragraph</p>
+</div>
+</template>
+
+<script>
+    export default {
+        name: "testtext",
+    }
+</script>
+
+<style scoped>
+
+</style>
